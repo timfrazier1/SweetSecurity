@@ -42,7 +42,7 @@ sudo rm -rf bro-2.4.1/
 
 #Install Critical Stack
 echo "Installing Critical Stack Agent"
-sudo wget https://intel.criticalstack.com/client/critical-stack-intel-arm.deb
+sudo wget http://intel.criticalstack.com/client/critical-stack-intel-arm.deb
 sudo dpkg -i critical-stack-intel-arm.deb
 sudo -u critical-stack critical-stack-intel api $cs_api 
 sudo rm critical-stack-intel-arm.deb
