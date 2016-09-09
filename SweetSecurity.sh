@@ -72,7 +72,7 @@ sudo zip -g jruby-complete-1.7.11.jar jni/arm-Linux/libjffi-1.2.so
 cd /home/pi
 sudo rm -rf jffi/
 sudo update-rc.d logstash defaults
-sudo /opt/logstash/bin/plugin install logstash-filter-translate
+sudo /opt/logstash/bin/logstash-plugin install logstash-filter-translate
 sudo cp SweetSecurity/logstash.conf /etc/logstash/conf.d
 sudo mkdir /etc/logstash/custom_patterns
 sudo cp SweetSecurity/bro.rule /etc/logstash/custom_patterns
