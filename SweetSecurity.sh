@@ -21,7 +21,7 @@ cd /home/pi
 echo "Installing Pre-Requisites..."
 #First need to make sure all repos are up to date
 sudo apt-get update
-sudo apt-get -y install cmake make gcc g++ flex bison libpcap-dev libssl-dev python-dev swig zlib1g-dev ant zip nmap
+sudo apt-get -y install cmake make gcc g++ flex bison libpcap-dev libssl-dev python-dev swig zlib1g-dev ant zip nmap texinfo
 
 
 
