@@ -105,10 +105,10 @@ sudo python /opt/SweetSecurity/pullTorIP.py
 sudo python /opt/SweetSecurity/pullMaliciousIP.py
 
 #Configure Logstash Conf File
-sudo sed -i -- "s/SMTP_HOST/"$smtpHost"/g" /opt/logstash/logstash.conf
-sudo sed -i -- "s/SMTP_PORT/"$smtpPort"/g" /opt/logstash/logstash.conf
-sudo sed -i -- "s/EMAIL_USER/"$emailAddr"/g" /opt/logstash/logstash.conf
-sudo sed -i -- "s/EMAIL_PASS/"$emailPwd"/g" /opt/logstash/logstash.conf
+sudo sed -i -- "s/SMTP_HOST/"$smtpHost"/g" /etc/logstash/conf.d/logstash.conf
+sudo sed -i -- "s/SMTP_PORT/"$smtpPort"/g" /etc/logstash/conf.d/logstash.conf
+sudo sed -i -- "s/EMAIL_USER/"$emailAddr"/g" /etc/logstash/conf.d/logstash.conf
+sudo sed -i -- "s/EMAIL_PASS/"$emailPwd"/g" /etc/logstash/conf.d/logstash.conf
 
 
 cd /home/pi
