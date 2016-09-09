@@ -91,6 +91,7 @@ sudo mv /opt/kibana/node/bin/npm /opt/kibana/node/bin/npm.orig
 sudo ln -s /usr/local/bin/node /opt/kibana/node/bin/node
 sudo ln -s /usr/local/bin/npm /opt/kibana/node/bin/npm
 sudo rm node_latest_armhf.deb
+sudo rm kibana-4.5.0-linux-x86.tar.gz
 sudo cp SweetSecurity/init.d/kibana /etc/init.d
 sudo chmod 755 /etc/init.d/kibana
 sudo update-rc.d kibana defaults
