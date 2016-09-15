@@ -73,6 +73,7 @@ cd /opt/logstash/vendor/jruby/lib
 sudo zip -g jruby-complete-1.7.11.jar jni/arm-Linux/libjffi-1.2.so
 cd /home/pi
 sudo rm -rf jffi/
+sudo cp SweetSecurity/init.d/logstash /etc/init.d
 sudo update-rc.d logstash defaults
 sudo /opt/logstash/bin/logstash-plugin install logstash-filter-translate
 sudo cp SweetSecurity/logstash.conf /etc/logstash/conf.d
