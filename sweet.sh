@@ -67,15 +67,15 @@ sudo cp SweetSecurity/bro.rule /etc/logstash/custom_patterns
 sudo mkdir /etc/logstash/translate
 
 cd /etc/logstash/conf.d/
-sudo wget -N https://raw.githubusercontent.com/timmolter/logstash-dfir/master/conf_files/bro/bro-conn_log.conf
-sudo wget -N https://raw.githubusercontent.com/timmolter/logstash-dfir/master/conf_files/bro/bro-dns_log.conf
-sudo wget -N https://raw.githubusercontent.com/timmolter/logstash-dfir/master/conf_files/bro/bro-files_log.conf
-sudo wget -N https://raw.githubusercontent.com/timmolter/logstash-dfir/master/conf_files/bro/bro-http_log.conf
-sudo wget -N https://raw.githubusercontent.com/timmolter/logstash-dfir/master/conf_files/bro/bro-notice_log.conf
-sudo wget -N https://raw.githubusercontent.com/timmolter/logstash-dfir/master/conf_files/bro/bro-ssh_log.conf
-sudo wget -N https://raw.githubusercontent.com/timmolter/logstash-dfir/master/conf_files/bro/bro-ssl_log.conf
-sudo wget -N https://raw.githubusercontent.com/timmolter/logstash-dfir/master/conf_files/bro/bro-weird_log.conf
-sudo wget -N https://raw.githubusercontent.com/timmolter/logstash-dfir/master/conf_files/bro/bro-x509_log.conf
+sudo wget -N https://raw.githubusercontent.com/timfrazier1/logstash-dfir/master/conf_files/bro/bro-conn_log.conf
+sudo wget -N https://raw.githubusercontent.com/timfrazier1/logstash-dfir/master/conf_files/bro/bro-dns_log.conf
+sudo wget -N https://raw.githubusercontent.com/timfrazier1/logstash-dfir/master/conf_files/bro/bro-files_log.conf
+sudo wget -N https://raw.githubusercontent.com/timfrazier1/logstash-dfir/master/conf_files/bro/bro-http_log.conf
+sudo wget -N https://raw.githubusercontent.com/timfrazier1/logstash-dfir/master/conf_files/bro/bro-notice_log.conf
+sudo wget -N https://raw.githubusercontent.com/timfrazier1/logstash-dfir/master/conf_files/bro/bro-ssh_log.conf
+sudo wget -N https://raw.githubusercontent.com/timfrazier1/logstash-dfir/master/conf_files/bro/bro-ssl_log.conf
+sudo wget -N https://raw.githubusercontent.com/timfrazier1/logstash-dfir/master/conf_files/bro/bro-weird_log.conf
+sudo wget -N https://raw.githubusercontent.com/timfrazier1/logstash-dfir/master/conf_files/bro/bro-x509_log.conf
 
 sudo sed -i 's/\"\/nsm\/bro\/logs\/current/\"\/opt\/nsm\/bro\/logs\/current/g' ./*.conf
 
