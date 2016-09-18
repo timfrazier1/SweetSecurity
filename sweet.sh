@@ -100,3 +100,16 @@ sudo rm kibana-4.5.0-linux-x86.tar.gz
 sudo cp SweetSecurity/init.d/kibana /etc/init.d
 sudo chmod 755 /etc/init.d/kibana
 sudo update-rc.d kibana defaults 95 10
+
+
+#Restart services
+echo "Restarting ELK services"
+sudo service elasticsearch restart
+sudo service kibana restart
+sudo service logstash restart
+
+
+#Deploy and start BroIDS
+echo "Deploying and starting BroIDS"
+sudo /opt/nsm/bro/bin/broctl deploy
+sudo sed -i 's/exit 0/\/opt\/nsm\/bro\/bin\/broctl start\n&/' /etc/rc.local
