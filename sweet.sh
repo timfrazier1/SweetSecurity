@@ -30,8 +30,9 @@ sudo dpkg -i critical-stack-intel-arm.deb
 #sudo -u critical-stack critical-stack-intel api $cs_api 
 sudo -u critical-stack critical-stack-intel api fd7477ed-2bad-4452-4e06-75a6c9b1085f
 sudo rm critical-stack-intel-arm.deb
-#sudo -u critical-stack critical-stack-intel config --set=bro.path=/opt/nsm/bro
-#sudo -u critical-stack critical-stack-intel config --set=bro.broctl.path=/opt/nsm/bro/bin/broctl
+sudo -u critical-stack critical-stack-intel config --set=bro.path=/opt/nsm/bro
+sudo -u critical-stack critical-stack-intel config --set=bro.broctl.path=/opt/nsm/bro/bin/broctl
+sudo bash -c 'echo "critical-stack ALL=(ALL) NOPASSWD: ALL" | (EDITOR="tee -a" visudo)'
 
 cd /home/pi
 
