@@ -79,6 +79,7 @@ sudo wget -N https://raw.githubusercontent.com/timfrazier1/logstash-dfir/master/
 
 sudo sed -i 's/\"\/nsm\/bro\/logs\/current/\"\/opt\/nsm\/bro\/logs\/current/g' ./*.conf
 
+sudo sed -i 's/#LS_OPTS=\"\"/LS_OPTS=\"-w 2\"/g' /etc/default/logstash
 
 cd /home/pi
 
