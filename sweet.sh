@@ -40,7 +40,7 @@ echo "Installing Elastic Search"
 sudo wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-2.3.2.deb
 sudo dpkg -i elasticsearch-2.3.2.deb
 sudo rm elasticsearch-2.3.2.deb
-sudo update-rc.d elasticsearch defaults
+sudo update-rc.d elasticsearch defaults 95 10
 
 
 #Install LogStash
@@ -58,7 +58,7 @@ sudo zip -g jruby-complete-1.7.11.jar jni/arm-Linux/libjffi-1.2.so
 cd /home/pi
 sudo rm -rf jffi/
 #sudo cp SweetSecurity/init.d/logstash /etc/init.d
-sudo update-rc.d logstash defaults
+sudo update-rc.d logstash defaults 95 10
 sudo /opt/logstash/bin/logstash-plugin install logstash-filter-translate
 #sudo cp SweetSecurity/logstash.conf /etc/logstash/conf.d
 
@@ -98,4 +98,4 @@ sudo rm node_latest_armhf.deb
 sudo rm kibana-4.5.0-linux-x86.tar.gz
 sudo cp SweetSecurity/init.d/kibana /etc/init.d
 sudo chmod 755 /etc/init.d/kibana
-sudo update-rc.d kibana defaults
+sudo update-rc.d kibana defaults 95 10
